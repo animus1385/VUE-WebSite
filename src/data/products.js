@@ -1,62 +1,98 @@
 export default [
   {
+    id: 1,
+    categoryId: 4,
     title: 'Радионяня Motorola MBP16',
-    price: '3 690 ₽',
+    price: 3690,
     image: '/img/radio.jpg',
+    colors: ['#73b6ea', '#ffbe15', '#939393']
   },
   {
+    id: 2,
+    categoryId: 1,
     title: 'Ультразвуковая зубная щётка Playbrush Smart Sonic',
-    price: '5 660 ₽',
+    price: 5660,
     image: '/img/toothbrush.jpg',
+    colors: ['#8be000', '#ff6b00', '#fff']
   },
   {
+    id: 3,
+    categoryId: 2,
     title: 'Смартфон Xiaomi Mi Mix 3 6/128GB',
-    price: '21 790 ₽',
+    price: 21790,
     image: '/img/phone.jpg',
+    colors: ['#000', '#73b6ea', '#ffbe15']
   },
   {
+    id: 4,
+    categoryId: 3,
     title: 'Электроскейт Razor Cruiser',
-    price: '24 690 ₽',
+    price: 24690,
     image: '/img/board.jpg',
+    colors: ['#939393', '#8be000', '#ff6b00']
   },
   {
+    id: 5,
+    categoryId: 2,
     title: 'Смартфон Xiaomi Mi A3 4/64GB Android One',
-    price: '14 960 ₽',
+    price: 14960,
     image: '/img/phone-2.jpg',
+    colors: ['#8be000', '#ff6b00', '#fff']
   },
   {
+    id: 6,
+    categoryId: 2,
     title: 'Смартфон Xiaomi Redmi 6/128GB',
-    price: '8 960 ₽',
+    price: 8960,
     image: '/img/phone-3.jpg',
+    colors:['#939393', '#8be000', '#ff6b00']
   },
   {
+    id: 7,
+    categoryId: 3,
     title: 'Электрический дрифт-карт Razor Crazy Cart',
-    price: '39 900 ₽',
+    price: 39900,
     image: '/img/bicycle.jpg',
+    colors: ['#8be000', '#ff6b00', '#fff']
   },
   {
+    id: 8,
+    categoryId: 3,
     title: 'Гироскутер Razor Hovertrax 2.0',
-    price: '34 900 ₽',
+    price: 34900,
     image: '/img/wheels.jpg',
+    colors:  ['#8be000', '#ff6b00', '#fff']
   },
   {
+    id: 9,
+    categoryId: 3,
     title: 'Детский трюковой самокат Razor Grom',
-    price: '4 990 ₽',
+    price: 4990,
     image: '/img/scooter.jpg',
+    colors: ['#000', '#73b6ea', '#ffbe15']
   },
   {
+    id: 10,
+    categoryId: 3,
     title: 'Роллерсёрф Razor RipStik Air Pro',
-    price: '6 690 ₽',
+    price: 6690,
     image: '/img/ripstik.jpg',
+    colors: ['#8be000', '#ff6b00', '#fff']
   },
   {
+    id: 11,
+    categoryId: 5,
     title: 'Наушники AirPods с беспроводным зарядным футляром',
-    price: '16 560 ₽',
+    price: 16560,
     image: '/img/airpods.jpg',
+    colors: ['#000', '#73b6ea', '#ffbe15']
   },
   {
+    id: 12,
+    categoryId: 5,
     title: 'Наушники Sony',
-    price: '30 690 ₽',
+    price: 30690,
     image: '/img/headphones.jpg',
+    colors: ['#939393', '#8be000', '#ff6b00']
   },
 ];
