@@ -1,0 +1,41 @@
+<template>
+
+   <section id="catalog" class="catalog">
+
+      <ProductsList :products="products" />
+
+      <BasePagination v-model="page" :count="countProducts" :per-page="productsPerPage"/>
+
+  </section>
+
+</template>
+
+<script>
+
+import products from '@/data/products';
+import ProductsList from '@/components/ProductList.vue';
+import BasePagination from '@/components/BasePagination.vue';
+
+export default {
+  name: 'App',
+ 
+  components: { ProductsList , BasePagination },
+   data() {
+    return {
+      page: 1,
+      productsPerPage: 3,
+      products,
+    };
+  },
+  computed: {
+    products() {
+      const offsest = (this.page - 1) * this.productsPerPage;
+      return products.slice(offsest, offsest + this.productsPerPage);
+    },
+    countProducts() {
+       return products.length;
+    }
+  }
+
+};
+</script>
