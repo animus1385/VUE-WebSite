@@ -3,9 +3,9 @@
     <li class="pagination__item">
       <a
         class="pagination__link pagination__link--arrow"
-        :class="{ 'pagination__link--disabled': currentNumber == 1 }"
+        :class="{ 'pagination__link--disabled': this.page == 1 }"
         aria-label="Предыдущая страница"
-        @click.prevent="prevPaginate()"
+        @click.prevent="paginates(page - 1)"
       >
         <svg width="8" height="14" fill="currentColor">
           <use xlink:href="#icon-arrow-left"></use>
@@ -18,7 +18,7 @@
         @click.prevent="paginates(pageNumber)"
         class="pagination__link"
         :class="{
-          'pagination__link--current': pageNumber === this.$attrs.modelValue,
+          'pagination__link--current': pageNumber === this.page,
         }"
       >
         {{ pageNumber }}
@@ -28,9 +28,9 @@
       <a
         class="pagination__link pagination__link--arrow"
         href="#"
-          :class="{ 'pagination__link--disabled': currentNumber ==  pages }"
+          :class="{ 'pagination__link--disabled': this.page ==  pages }"
         aria-label="Следующая страница"
-        @click.prevent="nextPaginate()"
+        @click.prevent="paginates(page + 1)"
       >
         <svg width="8" height="14" fill="currentColor">
           <use xlink:href="#icon-arrow-right"></use>
@@ -43,15 +43,6 @@
 <script>
 export default {
   name: "Pagination",
-  data() {
-    return {
-      currentNumber: 0,
-    };
-  },
-  model: {
-    prop: "page",
-    event: "paginates",
-  },
   props: ["page", "count", "perPage"],
   computed: {
     pages() {
@@ -60,20 +51,11 @@ export default {
   },
   methods: {
     paginates(page) {
-      this.$emit("update:modelValue", page);
-    },
-    prevPaginate() {
-      if (this.$attrs.modelValue > 1) {
-        this.currentNumber = this.$attrs.modelValue - 1;
-        this.$emit("update:modelValue", this.currentNumber);
+      if(page >= 1 && page <= this.pages) {
+        this.$emit("update:page", page);
       }
-    },
-    nextPaginate() {
-      if (this.$attrs.modelValue < this.pages) {
-        this.currentNumber = this.$attrs.modelValue + 1;
-        this.$emit("update:modelValue", this.currentNumber);
-      }
-    },
+     
+    }
   },
 };
 </script>

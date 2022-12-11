@@ -1,4 +1,5 @@
 <template>
+  
   <ul class="catalog__list">
   <ProductsItem :product="product" v-for="product in products" :key="product.id"/>
   </ul>
